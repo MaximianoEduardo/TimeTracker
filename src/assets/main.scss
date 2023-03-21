@@ -1,0 +1,25 @@
+@import './styles/colors/colors';
+@import './styles/typography/text';
+@import './styles/utils/background';
+@import './styles/components/card';
+
+
+* {
+    box-sizing: border-box;
+}
+
+html, body, app-root{
+    height: 100vh;
+}
+
+app-root{
+    display: flex;
+    max-width: 1440px;
+    justify-content: flex-start;
+    margin: 0 auto;
+}
+
+body {
+    font-size: $f_size;
+    background-color: $very_dark_blue;
+}

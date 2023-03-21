@@ -1,0 +1,71 @@
+
+<div class="dashboard_card card card--{{time.title}}" *ngFor="let time of timer$ | async">
+
+  <div class="card__header">
+
+  </div>
+
+  <div class="card__content">
+    <div class="title">
+      <span>
+        {{ time.title }}
+      </span>
+
+      <a href="#">
+        ...
+      </a>
+
+    </div>
+
+    <ng-container *ngIf="dataService.data === 'Daily'">
+      <div class="hours">
+        <span>
+          {{ time.timeframes.daily.current }}hrs
+        </span>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="dataService.data === 'Weekly'">
+      <div class="hours">
+        <span>
+          {{ time.timeframes.weekly.current }}hrs
+        </span>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="dataService.data === 'Monthly'">
+      <div class="hours">
+        <span>
+          {{ time.timeframes.monthly.current }}hrs
+        </span>
+      </div>
+    </ng-container>
+    
+
+    <div class="description">
+      <ng-container *ngIf="dataService.data === 'Daily' ">
+        <span>
+          Last Daily - {{ time.timeframes.daily.previous }}hrs 
+        </span>
+      </ng-container>
+
+      <ng-container *ngIf="dataService.data === 'Weekly' ">
+        <span>
+          Last Weekly - {{ time.timeframes.weekly.previous }}hrs           
+        </span>
+      </ng-container>
+
+      <ng-container *ngIf="dataService.data === 'Monthly' ">
+        <span>
+          Last Monthly - {{ time.timeframes.monthly.previous }}hrs   
+        </span>
+      </ng-container>
+      
+    </div>
+  </div>
+
+  
+
+</div>
+
+

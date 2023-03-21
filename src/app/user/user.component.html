@@ -1,0 +1,38 @@
+<div class="user__top">
+    <div class="user__image">
+      <img src="../assets/images/image-jeremy.png" alt="Jeremy">
+    </div>
+
+    <div class="user__info">
+      
+      <span>Report for</span>
+
+      <h2>Jeremy Robson</h2>
+
+    </div>
+  </div>
+
+  <div class="user__bottom">
+
+    <div class="content">
+        <span 
+          class="cursor"
+          [ngClass]="timeActive === 'Daily' ? 'active' : '' "
+          (click)="onChangeOfTime($event)">
+          Daily
+        </span>
+        <span 
+          class="cursor"
+          [ngClass]="timeActive === 'Weekly' ? 'active' : '' "
+          (click)="onChangeOfTime($event)">
+          Weekly
+          </span>
+        <span 
+          class="cursor"
+          [ngClass]="timeActive === 'Monthly' ? 'active' : '' "
+          (click)="onChangeOfTime($event)">
+          Monthly
+        </span>
+    </div>
+
+  </div>

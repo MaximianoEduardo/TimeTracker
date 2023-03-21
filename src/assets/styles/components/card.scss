@@ -1,0 +1,202 @@
+.user{
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    background-color: $dark_blue;
+    min-width: 250px;
+    margin-right: 15px;
+    @media screen and (max-width: 375px){
+        width: 80%;
+        margin: 0;
+    }
+    &__image{
+        padding-bottom: 30px;
+        img{
+            max-width: 90px;
+            border-radius: 50%;
+            border: 5px solid #fff;
+        }
+    }
+    &__info{
+        
+        span{
+            color: #fff;
+            opacity: 0.7;
+            font-size: 15px;
+        }
+        h2{
+            font-size: 27px;
+            color: #fff;
+            width: min-content;
+        }
+
+        @media screen and (max-width: 375px){
+            margin-left: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            h2{
+                width: auto;
+            }
+        }
+       
+    }
+
+    &__top{
+        background-color: $blue;
+        padding: 35px 15px;
+        border-radius: 10px;
+        @media screen and (max-width: 375px){
+            display: flex;
+        }
+    }
+
+    &__bottom{
+        background-color: $dark_blue;
+        padding: 25px 15px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        
+        .content{
+            display: flex;
+            flex-direction: column;
+            font-size: 15px;
+            color: $desaturated_blue;
+            gap: 5px;
+            cursor: pointer;
+            @media screen and (max-width: 375px){
+                flex-direction: row;
+                justify-content: space-around;
+            }
+            .active{
+                color: #fff;
+            }
+        }
+    }
+}
+
+.dashboard{
+    width: 100%;
+    @media screen and (max-width: 375px){
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.cards-wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 70%;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+    @media screen and (max-width: 375px){
+        width: 100%;
+        gap: 15px;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.card{
+
+    border: none;
+    background: transparent;
+    width: 33%;
+    border-radius: 10px;
+    @media screen and (max-width: 375px){
+        width: 80%;
+    }
+    &--Work{
+        .card__header{
+            @extend .bg-work;
+        }
+    }
+    &--Study{
+        .card__header{
+            @extend .bg-study;
+        }
+    }
+    &--Play{
+        .card__header{
+            @extend .bg-play;
+        }
+    }
+    &--Exercise{
+        .card__header{
+            @extend .bg-exercise;
+        }
+    }
+    &--Social{
+        .card__header{
+            @extend .bg-social;
+        }
+    }
+    &--Self{
+        .card__header{
+            @extend .bg-selfcare;
+        }
+    }
+
+
+    &__header{
+        width: 100%;
+        height: 35px;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+
+    
+    &__content{
+        border-radius: 10px;
+        background-color: $dark_blue;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        
+        .title{
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            span{
+                color: #fff;
+            }
+        }
+
+        .hours{
+            justify-self: center;
+            span{
+                font-size: 25px;
+                color: #fff;
+            }
+        }
+        .description{
+            span{
+                font-size: 12px;
+                color: #fff;
+            }
+        }
+        @media screen and (max-width: 375px){
+            flex-wrap: wrap;
+            flex-direction: row;
+            .title{
+                width: 100%;
+            }
+            .hours, .description{
+                width: 50%;
+            }
+            .description{
+                text-align: right;
+            }
+        }
+    }
+
+    &__title{
+        font-size: 18px;
+        color: #fff;
+    }
+
+}

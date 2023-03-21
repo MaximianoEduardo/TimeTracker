@@ -1,0 +1,40 @@
+.icons{
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.bg-work{
+    background-color: $ligh_red;
+    background-image: url('../../images/icon-work.svg');
+    @extend .icons;
+}
+
+.bg-study{
+    background-color: $light_red;
+    background-image: url('../../images/icon-study.svg');
+    @extend .icons;
+}
+
+.bg-play{
+    background-color: $soft_blue;
+    background-image: url('../../images/icon-play.svg');
+    @extend .icons;
+}
+
+.bg-exercise{
+    background-color: $lime_green;
+    background-image: url('../../images/icon-exercise.svg');
+    @extend .icons;
+}
+
+.bg-social{
+    background-color: $violet;
+    background-image: url('../../images/icon-social.svg');
+    @extend .icons;
+}
+
+.bg-selfcare{
+    background-color: $social_orange;
+    background-image: url('../../images/icon-self-care.svg');
+    @extend .icons;
+}
